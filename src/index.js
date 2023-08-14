@@ -33,6 +33,11 @@ const onSubmit = async e => {
       distance: { unit: fromUnit, value: distance },
       convertTo: toUnit,
     });
+  }
+
+  if (rule === null) {
+    alert('Invalid unit of measure');
+  } else {
     const { unit, value } = rule;
     showResult(resultEl, distance, value, fromUnit, unit);
     formEl.reset();
