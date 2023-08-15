@@ -9,7 +9,7 @@ const convert = async ({ distance, convertTo }) => {
     return null;
   } else {
     result = rules[unit][convertTo] * value;
-    return { unit: convertTo, value: result };
+    return { unit: convertTo, value: result.toFixed(2) };
   }
 };
 

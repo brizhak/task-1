@@ -35,7 +35,7 @@ const onSubmit = async e => {
     });
   }
 
-  if (rule === null) {
+  if (rule === null || rule === undefined) {
     alert('Invalid unit of measure');
   } else {
     const { unit, value } = rule;
